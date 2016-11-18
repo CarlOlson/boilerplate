@@ -1,0 +1,6 @@
+
+guard :shell do
+  watch(/\.pl$/) do
+    `~/bin/swipl test.pl`
+  end
+end
