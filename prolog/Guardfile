@@ -1,6 +1,6 @@
 
 guard :shell do
   watch(/\.pl$/) do
-    `~/bin/swipl test.pl`
+    `~/bin/swipl -l test.pl -g test -t halt`
   end
 end
