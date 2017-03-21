@@ -10,8 +10,12 @@ module.exports = function(config){
     ],
     testRunner: 'mocha',
     testFramework: 'mocha',
-    coverageAnalysis: 'perTest',
+    coverageAnalysis: 'all',
     reporter: ['clear-text',
 	       'progress'],
+    clearTextReporter: {
+      maxTestsToLog: 1
+    },
+    logLevel: 'warn'
   });
 }
