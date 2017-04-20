@@ -1,8 +1,10 @@
-{ pkgs ? (import <nixpkgs> {}), haxe ? (import ./haxe.nix {}) }:
+with import <nixpkgs> {};
 
 let
   inherit (pkgs) stdenv neko;
+  haxe = (import ./haxe.nix);
 in
+
 stdenv.mkDerivation {
   name = "haxe-project";
 

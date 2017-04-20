@@ -1,10 +1,11 @@
-{ pkgs ? (import <nixpkgs> {}) }:
+with import <nixpkgs> {};
 
 let
   inherit (pkgs)
     stdenv fetchgit ocaml zlib neko pcre;
   inherit (pkgs.ocamlPackages) camlp4;
 in
+
 stdenv.mkDerivation {
   name = "haxe-3.4.2";
 
